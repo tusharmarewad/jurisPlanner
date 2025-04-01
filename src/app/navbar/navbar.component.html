@@ -1,0 +1,39 @@
+<nav class="navbar p-0">
+    <div class="sub_container">
+      <a class="navbar-brand" href="#">
+        <img [src]="currentLogo" id="logo" class="logo" alt="JurisPlanner Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        (click)="toggleSidebar()" style="background:white;    
+         height: max-content;
+         margin-right: 1rem;">
+        <span class="navbar-toggler-icon"></span>
+      </button> 
+    </div>
+  
+    <!-- Sidebar -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel"
+      [class.show]="sidebarActive">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
+          (click)="toggleSidebar()"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="list-unstyled">
+          <li><a class="text-decoration-none">About us</a></li>
+          <li><a class="text-decoration-none">Vision & Mission</a></li>
+          <li><a class="text-decoration-none">Expertise</a></li>
+          <li><a class="text-decoration-none">Services</a></li>
+          <li><a class="text-decoration-none">Careers</a></li>
+          <li><a class="text-decoration-none">Contact Us</a></li>
+        </ul>
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <p>Terms & Conditions</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  

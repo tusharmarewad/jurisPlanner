@@ -1,0 +1,115 @@
+<div class="trademark-container">
+   
+    <div class="image-trademark">
+         <img src="../assets/icons/trademarklaptop.svg" alt="Business Agreement" class="img-fluid" />
+       </div>
+       <div class="content-trademark text-center p-5">
+         <h2 class="t-experts">We are Trademark Experts</h2>
+         <p>
+          We are a team of legal professionals experienced in business law, helping
+           you navigate the complexities of business agreements.
+         
+           Our mission is to empower your business with well-drafted, enforceable
+           agreements, reducing risks and fostering long-term success.
+         </p>
+       </div>
+   </div>
+
+
+
+ <!-- <div class="container text-center"> 
+    <h5 class="mb-4">Our Services</h5>
+    
+    <div class="stepper-container">
+      <div class="step">
+        <h4>Trademark Registeration</h4>
+        <div class="circle">1</div>
+      
+      </div>
+      
+      <div class="line"></div>
+      
+      <div class="step">
+        <div class="circle">2</div>
+       
+      </div>
+  
+      <div class="line"></div>
+  
+      <div class="step">
+        <div class="circle">3</div>
+       
+      </div>
+    </div>
+  </div> -->
+  
+
+
+
+   
+  <div class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="feature">
+        <div class="icon">
+            <img src="./assets/icons/ExpertKnowledge.svg" alt="Legal">
+        </div>
+        <div class="text">
+            <strong>Expert Knowledge</strong> - Deep understanding of trademark law for complete protection.
+        </div>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="./assets/icons/ticon2.svg" alt="Solutions">
+        </div>
+        <div class="text">
+            <strong>Comprehensive Services</strong> - From registration to transfer, we cover all your trademark needs.
+        </div>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="../assets/icons/ticon3.svg" alt="Communication">
+        </div>
+        <div class="text">
+            <strong>Personalized Approach</strong> - Tailored solutions for your unique business needs.
+        </div>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="../assets/icons/ticon4.svg" alt="Efficient">
+        </div>
+        <div class="text">
+            <strong>Fast & Reliable</strong> - Quick, efficient trademark services, allowing you to focus on your business.
+        </div>
+    </div>
+  </div> 
+  
+
+
+
+  <div class="container-fluid mt-5">
+    <div class="card shadow">
+      <div class="row">
+        <!-- Left Section for FAQs -->
+
+
+        <div class="col-md-6">
+            <h3>Questions? Look here.</h3>
+          <div *ngFor="let faq of faqs; let i = index" class="faq-item mb-3">
+            <div (click)="toggleAnswer(i)" class="faq-question d-flex align-items-center cursor-pointer">
+              <!-- Toggle button for + or - -->
+              <span class="faq-toggle-btn mr-2">{{ faq.isOpen ? '-' : '+' }}</span>
+              <span>{{ faq.question }}</span>
+            </div>
+            <div *ngIf="faq.isOpen" class="faq-answer mt-2">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Section for Image -->
+        <div class="col-md-6">
+          <img src="../assets/icons/FrameFAQ.svg" class="w-100 img-fluid" alt="FAQ Image">
+        </div>
+      </div>
+    </div>
+  </div>

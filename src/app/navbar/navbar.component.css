@@ -1,0 +1,46 @@
+.navbar .logo {
+    width: 100%;
+}
+
+.container-fluid {
+    /* background: url('../assets/intro.svg') no-repeat center center fixed;  */
+}
+
+.sub_container {
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    width: -webkit-fill-available;
+    align-items: anchor-center;
+}
+
+/* Sidebar */
+.offcanvas {
+    width: auto;
+    background-color: #021D78;
+    color: white;
+}
+
+.offcanvas-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.list-unstyled {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    color: white;
+}
+
+.list-unstyled li a {
+    color: white !important;
+}
+
+.list-unstyled li {
+    cursor: pointer;
+}

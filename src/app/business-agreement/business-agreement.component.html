@@ -1,0 +1,196 @@
+
+<div class="business-agreement-container">
+   
+    <div class="image-section">
+         <img src="../assets/bussinessagreement.svg" alt="Business Agreement" class="img-fluid" />
+       </div>
+       <div class="content-section text-center p-5">
+         <h2 class="experts">We are Business Agreements Experts</h2>
+         <p>
+          We are a team of legal professionals experienced in business law, helping
+           you navigate the complexities of business agreements.
+         
+           Our mission is to empower your business with well-drafted, enforceable
+           agreements, reducing risks and fostering long-term success.
+         </p>
+       </div>
+   </div>
+   
+   
+   <div class="container my-5">
+       <h2 class="text-left">Our Services</h2>
+       <div class="row">
+         <div class="col-md-4 text-center">
+           <div class="service-card">
+             <img src="./assets/icons/ba-drafting.svg" alt="Business Contract Drafting" class="img-fluid">
+           </div>
+           <h5>Business Contract Drafting</h5>
+         </div>
+         <div class="col-md-4 text-center">
+           <div class="service-card">
+             <img src="./assets/icons/ba-negotiation.svg" alt="Business Agreement Negotiation" class="img-fluid">
+           </div>
+           <h5>Business Agreement Negotiation</h5>
+         </div>
+         <div class="col-md-4 text-center">
+           <div class="service-card">
+             <img src="./assets/icons/ba-review.svg" alt="Business Contract Review" class="img-fluid">
+           </div>
+           <h5>Business Contract Review</h5>
+         </div>
+       </div>
+     </div>
+   
+   
+     <div class="container text-center ">
+       <div class="row">
+         <div class="col-md-4 ">
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[0], 'btn-light': hoveredButtons[0]}" 
+             (mouseenter)="onHover(0, true)" 
+             (mouseleave)="onHover(0, false)" 
+             (mousedown)="onMouseDown(0)">
+             Partnership Agreements
+           </button>
+     
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[1], 'btn-light': hoveredButtons[1]}" 
+             (mouseenter)="onHover(1, true)" 
+             (mouseleave)="onHover(1, false)" 
+             (mousedown)="onMouseDown(1)">
+             Employment Contracts
+           </button>
+     
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[2], 'btn-light': hoveredButtons[2]}" 
+             (mouseenter)="onHover(2, true)" 
+             (mouseleave)="onHover(2, false)" 
+             (mousedown)="onMouseDown(2)">
+             Shareholder Agreements
+           </button>
+         </div>
+     
+         <div class="col-md-4 d-flex flex-column align-items-center">
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[3], 'btn-light': hoveredButtons[3]}" 
+             (mouseenter)="onHover(3, true)" 
+             (mouseleave)="onHover(3, false)" 
+             (mousedown)="onMouseDown(3)">
+             Non-Disclosure Agreements (NDAs)
+           </button>
+     
+           <h2 class="my-3 special_ad">Specializations</h2>
+     
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[4], 'btn-light': hoveredButtons[4]}" 
+             (mouseenter)="onHover(4, true)" 
+             (mouseleave)="onHover(4, false)" 
+             (mousedown)="onMouseDown(4)">
+             Memorandum of Understanding (MOU)
+           </button>
+         </div>
+     
+         <div class="col-md-4">
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[5], 'btn-light': hoveredButtons[5]}" 
+             (mouseenter)="onHover(5, true)" 
+             (mouseleave)="onHover(5, false)" 
+             (mousedown)="onMouseDown(5)">
+             Service Agreements
+           </button>
+     
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[6], 'btn-light': hoveredButtons[6]}" 
+             (mouseenter)="onHover(6, true)" 
+             (mouseleave)="onHover(6, false)" 
+             (mousedown)="onMouseDown(6)">
+             Vendor and Supplier Agreements
+           </button>
+     
+           <button 
+             class="btn specialization" 
+             [ngClass]="{'btn-dark': !hoveredButtons[7], 'btn-light': hoveredButtons[7]}" 
+             (mouseenter)="onHover(7, true)" 
+             (mouseleave)="onHover(7, false)" 
+             (mousedown)="onMouseDown(7)">
+             Co-founder Agreements
+           </button>
+         </div>
+       </div>
+     </div>
+     
+   
+   
+     <div class="why-choose-us">
+       <h2>Why Choose Us</h2>
+       <div class="feature">
+           <div class="icon">
+               <img src="../assets/icons/iconBA1.svg" alt="Legal">
+           </div>
+           <div class="text">
+               <strong>Expert Legal Knowledge</strong> - Extensive experience in business law to protect your interests.
+           </div>
+       </div>
+       <div class="feature">
+           <div class="icon">
+               <img src="../assets/icons/iconBA2.svg" alt="Solutions">
+           </div>
+           <div class="text">
+               <strong>Tailored Solutions</strong> - Custom agreements suited to your unique business needs.
+           </div>
+       </div>
+       <div class="feature">
+           <div class="icon">
+               <img src="../assets/icons/iconBA3.svg" alt="Communication">
+           </div>
+           <div class="text">
+               <strong>Clear Communication</strong> - We make complex agreements easy to understand.
+           </div>
+       </div>
+       <div class="feature">
+           <div class="icon">
+               <img src="../assets/icons/iconBA4.svg" alt="Efficient">
+           </div>
+           <div class="text">
+               <strong>Efficient & Reliable</strong> - Quick and reliable service for your peace of mind.
+           </div>
+       </div>
+     </div> 
+     
+   
+     <div class="container-fluid mt-5">
+       <div class="card shadow">
+         <div class="row">
+           <!-- Left Section for FAQs -->
+   
+   
+           <div class="col-md-6">
+               <h3>Questions? Look here.</h3>
+             <div *ngFor="let faq of faqs; let i = index" class="faq-item mb-3">
+               <div (click)="toggleAnswer(i)" class="faq-question d-flex align-items-center cursor-pointer">
+                 <!-- Toggle button for + or - -->
+                 <span class="faq-toggle-btn mr-2">{{ faq.isOpen ? '-' : '+' }}</span>
+                 <span>{{ faq.question }}</span>
+               </div>
+               <div *ngIf="faq.isOpen" class="faq-answer mt-2">
+                 <p>{{ faq.answer }}</p>
+               </div>
+             </div>
+           </div>
+           
+           <!-- Right Section for Image -->
+           <div class="col-md-6">
+             <img src="../assets/icons/FrameFAQ.svg" class="w-100 img-fluid" alt="FAQ Image">
+           </div>
+         </div>
+       </div>
+     </div>
+     
+    

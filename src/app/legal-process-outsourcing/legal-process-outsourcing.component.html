@@ -1,0 +1,94 @@
+<div class="trademark-container">
+   
+    <div class="image-trademark">
+         <img src="../assets/icons/leagaloutsourcing.svg" alt="Business Agreement" class="img-fluid" />
+       </div>
+       <div class="content-trademark text-center p-5">
+         <h2 class="t-experts">We are Legal Process Outsourcing Experts</h2>
+         <p>
+            JurisPlanner specializes in drafting and registering online conveyance deeds and sale deeds, as well as handling IGR (Inspector General of Registration) department registrations for buying and selling flats, commercial spaces, and offices. Our experienced team ensures a smooth, efficient process for both buyers and sellers.
+         </p>
+         <h2 class="t-experts">Our Team</h2>
+         <p>
+            <strong>Manager (SM)</strong>  - Guides clients through the process, explaining documentation and providing consultation for buying and selling.
+         </p>
+         <p>
+            <strong> Relationship Manager (RM)</strong>   - Your point of contact, ensuring all legal processes are completed on time and handling any queries.
+         </p>
+         <p>
+            <strong> Accounts</strong> - Manages financial transactions, payments, and tax calculations with complete transparency.
+        </p>
+        <p>
+            <strong>(Legal Team)</strong>  - Drafts the deed documents and ensures proper registration with the IGR department.
+        </p>
+       </div>
+   </div>
+
+
+   
+  <div class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="feature">
+        <div class="icon">
+            <img src="./assets/icons/iconBA1.svg" alt="Legal">
+        </div>
+        <div class="text">
+            <strong>Expert Legal Knowledge</strong> - Extensive experience in business law to protect your interests.
+        </div>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="./assets/icons/iconBA2.svg" alt="Solutions">
+        </div>
+        <div class="text">
+            <strong>Tailored Solutions</strong>  - Custom agreements suited to your unique business needs.
+        </div>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="../assets/icons/iconBA3.svg" alt="Communication">
+        </div>
+        <div class="text">
+            <strong>Clear Communication</strong> - We make complex agreements easy to understand.
+        </div>
+    </div>
+    <div class="feature">
+        <div class="icon">
+            <img src="../assets/icons/iconBA4.svg" alt="Efficient">
+        </div>
+        <div class="text">
+            <strong>Efficient & Reliable</strong> - Quick and reliable service for your peace of mind.
+        </div>
+    </div>
+  </div> 
+  
+
+
+
+  <div class="container-fluid mt-5">
+    <div class="card shadow">
+      <div class="row">
+        <!-- Left Section for FAQs -->
+
+
+        <div class="col-md-6">
+            <h3>Questions? Look here.</h3>
+          <div *ngFor="let faq of faqs; let i = index" class="faq-item mb-3">
+            <div (click)="toggleAnswer(i)" class="faq-question d-flex align-items-center cursor-pointer">
+              <!-- Toggle button for + or - -->
+              <span class="faq-toggle-btn mr-2">{{ faq.isOpen ? '-' : '+' }}</span>
+              <span>{{ faq.question }}</span>
+            </div>
+            <div *ngIf="faq.isOpen" class="faq-answer mt-2">
+              <p>{{ faq.answer }}</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Right Section for Image -->
+        <div class="col-md-6">
+          <img src="../assets/icons/FrameFAQ.svg" class="w-100 img-fluid" alt="FAQ Image">
+        </div>
+      </div>
+    </div>
+  </div>

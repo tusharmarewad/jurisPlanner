@@ -1,0 +1,182 @@
+
+/* 1-section */
+.trademark-container {
+    max-width: 100%;
+  }
+  
+  .image-trademark {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .image-trademark img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .content-trademark {
+    background-color: #f8f9fa;
+  }
+  .t-experts {
+    text-align: left;
+   font-size: 34px;
+   font-weight: 700 !important;
+    
+    
+  }
+  p {
+    text-align: left;
+    font-size: 22px;
+   
+  }
+
+
+
+
+
+
+  /* Container */
+  .why-choose-us {
+    background-color: #f0f4ff; /* Light blue background */
+    padding: 50px;
+    border-radius: 10px;
+   
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  
+  /* Title */
+  .why-choose-us {
+    padding: 1em 6em;
+  }
+  
+  .heading-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .heading-container h2 {
+    margin: 0;
+  }
+  
+  .heading-line {
+    border: none;
+    height: 2px;
+    background-color: #000; /* Adjust the color as needed */
+    flex-grow: 1;
+    margin-left: 10px;
+  }
+  
+  .feature {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .feature .icon {
+    margin-right: 15px;
+  }
+  
+  .feature .text {
+    flex-grow: 1;
+  }
+  strong{
+    font-weight: 500;
+    font-size: 1.1em;
+  }
+   .text{
+    font-size: 1.5em;
+   }
+  
+
+
+
+.container-fluid{
+    width: 100%;
+}
+
+   h3 {
+    padding: 1em;
+}
+
+  .faq-item {
+    padding: 58px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .faq-question {
+    font-weight: 600;
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+  }
+
+  .faq-toggle-btn {
+    font-size: 1.5rem;
+    color: #007bff;
+    cursor: pointer;
+  }
+
+  .faq-answer {
+    font-size: 1rem;
+    color: #333;
+  }
+
+
+
+
+  .stepper-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+  }
+  
+  .circle {
+    width: 30px;
+    height: 30px;
+    background-color: #0c1c44; /* Dark blue */
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 16px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: #0c1c44;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .step p {
+    margin-top: 8px;
+    font-size: 14px;
+  }
+  
+  @media screen and (max-width: 486px) {
+
+    .special_ad{
+      padding: 0px;
+
+    }
+
+
+   }

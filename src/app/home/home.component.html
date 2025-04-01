@@ -1,0 +1,204 @@
+<div class="container-fluid main-container p-0 m-0">
+
+ 
+
+    <!-- Vertical Progress Navigation -->
+    <div class="progress-nav position-fixed top-50 end-0 translate-middle-y">
+      <div class="progress-step d-flex align-items-center">
+        <input class="circle" type="radio" name="progress" (click)="setActiveSection('introduction')" [checked]="activeSection === 'introduction'" />
+        <a href="#introduction" class="ms-2 text-decoration-none text-light"
+          (click)="setActiveSection('introduction')">Introduction</a>
+      </div>
+      <div class="progress-line bg-secondary"></div>
+  
+      <div class="progress-step d-flex align-items-center">
+        <input class="circle" type="radio" name="progress" (click)="setActiveSection('our-expertise')" [checked]="activeSection === 'our-expertise'" />
+        <a href="#our-expertise" class="ms-2 text-decoration-none text-light"
+          (click)="setActiveSection('our-expertise')">Our Expertise</a>
+      </div>
+      <div class="progress-line bg-secondary"></div>
+  
+      <div class="progress-step d-flex align-items-center">
+        <input class="circle" type="radio" name="progress" (click)="setActiveSection('other-services')" [checked]="activeSection === 'other-services'" />
+        <a href="#other-services" class="ms-2 text-decoration-none text-light"
+          (click)="setActiveSection('other-services')">Other Services</a>
+      </div>
+      <div class="progress-line bg-secondary"></div>
+  
+      <div class="progress-step d-flex align-items-center">
+        <input class="circle" type="radio" name="progress" (click)="setActiveSection('contact-us')" [checked]="activeSection === 'contact-us'" />
+        <a href="#contact-us" class="ms-2 text-decoration-none text-light"
+          (click)="setActiveSection('contact-us')">Contact Us</a>
+      </div>
+    </div>
+  
+  
+    <!-- Main Content -->
+    <div class="col-md-10 main-content" id="introduction" #introduction>
+      <div class="content">
+        <img src="./assets/JP.svg" />
+        <h1 class="title" style="color: #021D78;">JurisPlanner,</h1>
+        <p class="description fs-5 mt-3" style="color: #021D78; font-weight: 600; font-size: 20;text-align: left;">
+          Your trusted partner in non-litigation legal services, specializing in
+          LPO, agreements, trademarks, and legal documentation to keep businesses
+          and individuals compliant. Our expert team ensures accuracy, efficiency,
+          and reliability in every service.
+        </p>
+        <i class="small-description  fs-6 mt-3" style="color: #021D78; font-weight: 400; font-size: 14;text-align: left;">
+          JurisPlanner was founded to simplify non-litigation legal processes for
+          businesses and individuals. With a reputation for excellence, we provide
+          legal support in registrations, agreements, payroll, IP, and compliance,
+          ensuring accuracy and timely execution across industries.
+        </i>
+      </div>
+    </div>
+  
+  
+    <!-- Our Expertise content -->
+    <div class="col-md-10 sub_container-fluid" id="our-expertise" #ourExpertise>
+      <div class="d-flex align-items-center">
+        <div class="content-box text-white px-5">
+          <!-- Heading -->
+          <h2 class="fw-bold text-light">Our Expertise</h2>
+          <p class="mb-3">At JurisPlanner, we specialize in three core areas:</p>
+  
+          <!-- Input-like Buttons -->
+          <div class="btn-group-vertical w-100">
+            <!-- Button 1 -->
+            <button class="custom-btn d-flex align-items-center mb-5" (click)="business_agreement()">
+              <img src="/assets/legal.svg" class="icon me-3">
+              <div class="divider"></div>
+              <span class="text fw-bold">Business Agreements</span>
+            </button>
+            <!-- Button 2 -->
+            <button class="custom-btn d-flex align-items-center mb-5" (click)="LPO()">
+              <img src="/assets/supply-chain.svg" class="icon me-3">
+              <div class="divider"></div>
+              <span class="text fw-bold"> Legal Process Outsourcing</span>
+            </button>
+            <!-- Button 3 -->
+            <button class="custom-btn d-flex align-items-center" (click)="trademark()">
+              <img src="/assets/tm.svg" class="icon me-3">
+              <div class="divider"></div>
+              <span class="text fw-bold">Trademark</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- service content -->
+  
+    <div class="other-services" id="other-services">
+  
+      <img src="../assets/services.svg" alt="Background" class="background-image" />
+  
+      <div class="content_service">
+        <div class="header">
+          <h1>Other Services</h1>
+          <p>We also offer a wide range of other non-litigation legal services, including:</p>
+        </div>
+        <div class="services-grid">
+          <div class="row service-row">
+            <div class="service-card">Valuation Services</div>
+            <div class="service-card">Search Reports for Banks</div>
+          </div>
+          <div class="row service-row">
+            <div class="service-card">MSME Registrations</div>
+            <div class="service-card">Labor Law & Payroll Compliance</div>
+          </div>
+          <div class="row service-row">
+            <div class="service-card">Intimation of Mortgage</div>
+            <div class="service-card">Rent Agreements</div>
+          </div>
+          <div class="row service-row">
+            <div class="service-card">Will Preparation & Power of Attorney</div>
+            <div class="service-card">Private Trust Formation</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- contact Info Content -->
+    <div class="container-fluid_contact contact-container p-0" id="contact-us">
+      <div class="row d-flex flex-row-reverse m-0 p-0">
+        <!-- Right Mockup Section -->
+        <div class="col-lg-6 col-md-12 p-0">
+          <div class="mockup">
+            <img src="../assets/contactinfo.svg" alt="Contact Us Mockup" class="img-fluid">
+          </div>
+        </div>
+  
+       <!-- Left Form Section -->
+  <div class="col-lg-6 col-md-12 form-section">
+    <h2>Contact Information</h2>
+    <p>
+      Kindly reach out to us through the form below, and our team will respond
+      promptly.
+    </p>
+  
+    <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <div class="form-group d-flex align-items-center">
+            <img src="../assets/full_name.svg" alt="icon" class="icon-class mt-4">
+            <label for="fullName" class="label-1">Full Name*</label>
+          </div>
+          <input type="text" class="form-control" formControlName="fullName" />
+          <small *ngIf="submitted && contactForm.controls['fullName'].invalid" class="text-danger"></small>
+          </div>
+        <div class="col-md-6">
+          <img src="../assets/juries_email.svg" alt="icon" class="icon-class mt-0">
+          <label for="email" class="label-1">Email*</label>
+          <input type="email" class="form-control" formControlName="email" />
+          <small *ngIf="submitted && contactForm.controls['email'].invalid" class="text-danger">Valid Email is required</small>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <img src="../assets/phoneno.svg" alt="icon" class="icon-class mt-0">
+          <label for="phoneNumber" class="label-1">Phone Number*</label>
+          <input type="tel" class="form-control" formControlName="phoneNumber" />
+          <small *ngIf="submitted && contactForm.controls['phoneNumber'].invalid" class="text-danger">Valid 10-digit phone number is required</small>
+        </div>
+        <div class="col-md-6">
+          <img src="../assets/location.svg" alt="icon" class="icon-class mt-0">
+          <label for="location" class="label-1">Location (Current)*</label>
+          <input type="text" class="form-control" formControlName="location" />
+          <small *ngIf="submitted && contactForm.controls['location'].invalid" class="text-danger">Location is required</small>
+        </div>
+      </div>
+  
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <img src="../assets/location.svg" alt="icon" class="icon-class mt-0">
+          <label for="pincode" class="label-1">Pincode</label>
+          <input type="text" class="form-control" formControlName="pincode" />
+        </div>
+        <div class="col-md-6">
+          <label for="message" class="label-1">Message</label>
+          <input type="text" class="form-control" formControlName="message" />
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label>Select Subject*</label>
+        <div class="subject-options">
+          <div *ngFor="let option of ['General Inquiry', 'Trademark', 'MSME Registration', 'Search Reports for Banks', 'Agreements', 'Intimation of Mortgage', 'Legal Process Outsourcing', 'Private Trust Formation', 'Labor Law & Payroll Compliance', 'Valuation Services', 'Rent Agreements', 'Business Agreements']">
+            <input type="radio" [value]="option" formControlName="subject" />
+            <label>{{ option }}</label>
+          </div>
+        </div>
+        <small *ngIf="submitted && contactForm.controls['subject'].invalid" class="text-danger">Please select a subject</small>
+      </div>
+  
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </div>
+  
+  
+  
+      </div>
+    </div>
+  </div>
