@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./trademark.component.css']
 })
 export class TrademarkComponent {
+  activeStep: string = 'registration'; // default visible step
   faqs = [
     {
       question: 'What is a trademark?',

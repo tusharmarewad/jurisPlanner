@@ -1,7 +1,7 @@
 <div class="trademark-container">
    
     <div class="image-trademark">
-         <img src="../assets/icons/trademarklaptop.svg" alt="Business Agreement" class="img-fluid" />
+         <img src="../assets/trademarklaptop.svg" alt="Business Agreement" class="img-fluid" />
        </div>
        <div class="content-trademark text-center p-5">
          <h2 class="t-experts">We are Trademark Experts</h2>
@@ -44,6 +44,69 @@
   </div> -->
   
 
+  <div class="container my-4 trademark-section">
+    <!-- Main Steps -->
+    <div class="row text-center mb-4">
+      <div class="col step" (click)="activeStep = 'registration'">
+        <div class="step-title">Trademark Registration</div>
+        <div class="circle" [class.active]="activeStep === 'registration'">1</div>
+      </div>
+      <div class="col step" (click)="activeStep = 'renewal'">
+        <div class="step-title">Trademark Renewal</div>
+        <div class="circle" [class.active]="activeStep === 'renewal'">2</div>
+      </div>
+      <div class="col step" (click)="activeStep = 'transfer'">
+        <div class="step-title">Trademark Transfer</div>
+        <div class="circle" [class.active]="activeStep === 'transfer'">3</div>
+       
+      </div>
+    </div>
+  
+    <!-- Step 1 Details -->
+    <div class="row mb-4" *ngIf="activeStep === 'registration'">
+      <div class="col step-detail">
+        <div class="vertical-line">
+          <div class="dot">a</div>
+          <div class="detail">Trademark Availability Search</div>
+          <div class="dot">b</div>
+          <div class="detail">Application Filing</div>
+          <div class="dot">c</div>
+          <div class="detail">Legal Support</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Step 2 Details -->
+    <div class="row mb-4" *ngIf="activeStep === 'renewal'">
+      <div class="col offset-4 step-detail">
+        <div class="vertical-line">
+          <div class="dot">a</div>
+          <div class="detail">Renewal Monitoring</div>
+          <div class="dot">b</div>
+          <div class="detail">Seamless Filing</div>
+          <div class="dot">c</div>
+          <div class="detail">Global Renewal</div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Step 3 Details -->
+    <div class="row" *ngIf="activeStep === 'transfer'">
+      <div class="col offset-8 step-detail">
+        <div class="vertical-line">
+          <div class="dot">a</div>
+          <div class="detail">Transfer Guidance</div>
+          <div class="dot">b</div>
+          <div class="detail">Documentation</div>
+          <div class="dot">c</div>
+          <div class="detail">Security</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+
 
 
    
@@ -51,7 +114,7 @@
     <h2>Why Choose Us</h2>
     <div class="feature">
         <div class="icon">
-            <img src="./assets/icons/ExpertKnowledge.svg" alt="Legal">
+            <img src="./assets/expertKnowledge.svg" alt="Legal">
         </div>
         <div class="text">
             <strong>Expert Knowledge</strong> - Deep understanding of trademark law for complete protection.
@@ -59,7 +122,7 @@
     </div>
     <div class="feature">
         <div class="icon">
-            <img src="./assets/icons/ticon2.svg" alt="Solutions">
+            <img src="./assets/solutions.svg" alt="Solutions">
         </div>
         <div class="text">
             <strong>Comprehensive Services</strong> - From registration to transfer, we cover all your trademark needs.
@@ -67,7 +130,7 @@
     </div>
     <div class="feature">
         <div class="icon">
-            <img src="../assets/icons/ticon3.svg" alt="Communication">
+            <img src="../assets/communication.svg" alt="Communication">
         </div>
         <div class="text">
             <strong>Personalized Approach</strong> - Tailored solutions for your unique business needs.
@@ -75,7 +138,7 @@
     </div>
     <div class="feature">
         <div class="icon">
-            <img src="../assets/icons/ticon4.svg" alt="Efficient">
+            <img src="../assets/efficient.svg" alt="Efficient">
         </div>
         <div class="text">
             <strong>Fast & Reliable</strong> - Quick, efficient trademark services, allowing you to focus on your business.
@@ -108,7 +171,7 @@
         
         <!-- Right Section for Image -->
         <div class="col-md-6">
-          <img src="../assets/icons/FrameFAQ.svg" class="w-100 img-fluid" alt="FAQ Image">
+          <img src="../assets/FrameFAQ.svg" class="w-100 img-fluid" alt="FAQ Image">
         </div>
       </div>
     </div>

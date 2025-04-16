@@ -104,6 +104,7 @@ h3 {
     cursor: pointer;
     display: flex;
     align-items: center;
+    gap: 1rem;
   }
 
   .faq-toggle-btn {
@@ -194,5 +195,34 @@ h3 {
 
     }
 
+    .feature{
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      flex-direction: column;
+    }
+    .feature .text{
+      width: 18rem;
+      text-align: center;
+    }
+
+    .why-choose-us{
+      padding: 0;
+      text-align: center;
+  }
+
+  .faq-item{
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question{
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 
    }

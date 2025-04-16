@@ -112,6 +112,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
+    gap: 1rem;
   }
 
   .faq-toggle-btn {
@@ -178,5 +179,127 @@
 
     }
 
+    .feature{
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      flex-direction: column;
+    }
+    .feature .text{
+      width: 18rem;
+      text-align: center;
+    }
 
+    .why-choose-us{
+      padding: 0;
+      text-align: center;
+  }
+
+
+  .faq-item{
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question{
+  font-weight: 600;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.faq-item{
+  padding: 7px;
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question{
+font-weight: 600;
+font-size: 1.4rem;
+cursor: pointer;
+display: flex;
+align-items: center;
+gap: 1rem;
+}
    }
+
+
+   .trademark-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  }
+  
+  .step {
+    position: relative;
+  }
+  
+  .step .circle {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+  }
+  
+  .step-title {
+    margin-top: 0.5rem;
+    font-weight: 600;
+  }
+  
+  .step-detail {
+    display: flex;
+    /* justify-content: center; */
+    /* margin-left: 4.5rem; */
+  }
+  
+  .vertical-line {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .vertical-line::before {
+    content: '';
+    position: absolute;
+    width: 3px;
+    height: 90%;
+    background-color: #007bff;
+    top: -1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  
+  .dot {
+    width: 25px;
+    height: 25px;
+    background-color: #007bff;
+    border-radius: 50%;
+    margin: 15px 0 5px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    color: white;
+  }
+  
+  .detail {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+  
+  .circle.active {
+    background-color: #0056b3; /* darker blue */
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  }
+  

@@ -1,11 +1,73 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.fullpage-container {
+  /* scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth; */
+
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* Outer wrapper fills screen */
+.scale-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #fff; /* Optional background */
+}
+
+/* Inner container with 1920x1080 base layout */
+.scale-container {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: top left;
+  transform: scale(var(--scale-ratio));
+}
+
+
+
+
+
+.section {
+  scroll-snap-align: start;
+  height: 100vh;
+  overflow-y: hidden;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section.allow-scroll {
+  height: auto; 
+  min-height: 100vh;
+  scroll-snap-align: start;
+  overflow-y: visible;
+}
+
+
+
 /* Navbar */
 .navbar .logo {
     width: 100%;
   }
-  .container-fluid{
+  /* .container-fluid{
     background: url('/assets/intro.svg') no-repeat center center fixed; 
     height: 100vh;
-  }
+  } */
+
+  /* #introduction{
+    background: url('/assets/JP_Intro.svg') no-repeat center center fixed; 
+    height: 100vh;
+  
+  } */
  
 .main-content2{
     background: url('/assets/JPExpertise.svg') no-repeat center center fixed; 
@@ -26,6 +88,7 @@
     flex-direction: column;
     /* align-items: center; */
     margin-right: 10rem;
+    z-index:999;
   }
   
   .progress-step {
@@ -54,11 +117,15 @@
     background-size: cover;
   }
 
-  .content{
+  .content {
     width: 50%;
-    padding-left: 4rem;
+    /* padding-left: 4rem; */
     text-align: center;
-    padding-top: 9.5rem;
+    /* padding-top: 9.5rem; */
+    position: relative;
+    top:25%;
+    left:5%;
+    z-index: 2;
   }
   
   .title {
@@ -114,9 +181,18 @@
     background: url('/assets/JPExpertise.svg') no-repeat center center/cover;
     height: 100vh; /* Full height of the viewport */
     width: 100%; /* Full width of the viewport */
-    position: relative;
     padding-left: 2rem; /* Adjust left padding as needed */
-    z-index:-1;
+    position: relative;
+  z-index: 2;
+  }
+
+  .sub_container-intro{
+    background: url('/assets/JP_Intro.svg') no-repeat center center/cover;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    padding-left: 2rem; /* Adjust left padding as needed */
+    position: relative;
+  z-index: 2;
   }
 
   
@@ -126,22 +202,30 @@
     padding: 2rem;
     border-radius: 10px;    
     margin-top: 5rem;
+    position: relative;
+  z-index: 9;
   }
   
-  /* Button (input-like) styling */
   .custom-btn {
     background-color: #ffffff;
     border: none;
-    border-radius: 30px; /* Rounded corners for input style */
+    border-radius: 30px;
     padding: 15px 20px;
     font-size: 1.2rem;
     text-align: left;
     display: flex;
     align-items: center;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.2s, transform 0.2s;
-    width: 100%; /* Full-width buttons */
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    
+    /* This is main fix */
+    position: relative;
+    z-index: 9;
+    pointer-events: auto;
+    cursor: pointer;
   }
+  
   
   .custom-btn:hover {
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
@@ -162,6 +246,8 @@
     .content-box {
       max-width: 100%; /* Take full width on smaller screens */
       padding: 1.5rem;
+      position: relative;
+  z-index: 9;
     }
   
     .custom-btn {
@@ -173,8 +259,16 @@
       width: 30px;
       height: 30px;
     }
+
+    
   }
 
+
+  @media (min-width: 1200px) {
+   img{
+    max-width: 1920px;
+   }
+  }
   .divider {
     width: 1px;
     height: 40px;
@@ -210,13 +304,15 @@
     text-align: center;
     /* padding-top: 17rem; */
     width: auto;
+    position: absolute;
+    top: 14%;
     /* padding: 0; */
-    padding-left: 0;
   }
 
   .content-box[_ngcontent-ng-c1603531998] {
-    /* max-width: 100%; */
     margin-top: 4rem;
+    position: relative;
+  z-index: 9;
   }
     
     .title {
@@ -248,17 +344,23 @@
   .other-services {
     position: relative;
     width: 100%;
-    height: auto;
     overflow: hidden;
     z-index: -1;
   }
   
   .background-image {
-    width: 100%;
+    /* width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
-    z-index: 1;
+    z-index: 1; */
+
+    background: url('/assets/services.svg') no-repeat center center/cover;
+    height: 100vh; /* Full height of the viewport */
+    width: 100%; /* Full width of the viewport */
+    padding-left: 2rem; /* Adjust left padding as needed */
+    position: relative;
+  z-index: 2;
   }
   
   .content_service {
@@ -459,6 +561,7 @@
 }
   .mockup img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: -webkit-fill-available;
   }
 
   .form-section {
@@ -480,9 +583,17 @@
       border: none;
       border-radius: 5px;
       margin-left: 7rem;
+
+    
   }
   
-  
+  .other-services {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+  }
   
     .form-section {
       margin-bottom: 1.5rem;
@@ -582,9 +693,12 @@
 
 /* Initial state: elements are off-screen */
 .custom-btn {
-  opacity: 0; /* Hide initially */
-  transform: translateX(-100%); /* Start off-screen */
+  opacity: 0;
+  transform: translateX(-100%);
   transition: opacity 0.5s ease-out, transform 0.8s ease-out;
+  position: relative;
+  z-index: 9; 
+  pointer-events: auto; 
 }
 
 /* Animation triggers when section is visible */
@@ -605,3 +719,5 @@
 .custom-btn:nth-child(3) {
   transition-delay: 0.6s;
 }
+
+

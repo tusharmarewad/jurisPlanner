@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactService } from '../api-service.service';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { ChangeDetectorRef } from '@angular/core';
 
 
 @Component({
@@ -22,7 +23,7 @@ export class HomeComponent {
   submitted = false;
 
   constructor(private fb: FormBuilder, private contactService: ContactService,private renderer: Renderer2,private el: ElementRef,
-    private router: Router,
+    private router: Router,private cdRef: ChangeDetectorRef
   ) {
     this.contactForm = this.fb.group({
       fullName: ['', Validators.required],
@@ -103,6 +104,10 @@ export class HomeComponent {
 
 
   ngAfterViewInit() {
+
+    this.adjustScale();
+    window.addEventListener('resize', () => this.adjustScale());
+
     // Ensure "Introduction" is visible by default
     setTimeout(() => {
         if (this.introductionSection) {
@@ -146,6 +151,16 @@ export class HomeComponent {
 }
 
 
+adjustScale() {
+  const baseWidth = 1920;
+  const baseHeight = 1080;
+  const scaleW = window.innerWidth / baseWidth;
+  const scaleH = window.innerHeight / baseHeight;
+  const scale = Math.min(scaleW, scaleH);
+
+  document.documentElement.style.setProperty('--scale-ratio', scale.toString());
+}
+
   toggleSidebar() {
     this.sidebarActive = !this.sidebarActive;
   }
@@ -158,15 +173,18 @@ export class HomeComponent {
     }
 }
 
-business_agreement(){
-  this.router.navigate(['business-agreement']);
+business_agreement() {
+  this.router.navigate(['/business-agreement']);
+
 }
 
-LPO(){
+LPO() {
   this.router.navigate(['legal-process-outsourcing']);
+
 }
 
-trademark(){
+trademark() {
   this.router.navigate(['trademarks']);
+
 }
 }
